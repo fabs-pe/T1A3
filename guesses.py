@@ -2,7 +2,7 @@ user_name = (input("Enter you Name: "))
 user_age = int(input("Enter your age: ")) 
 
 def welcome_message():
-    print(f"Welcome {user_name} ")
+    print(f"Welcome {user_name} , lets get started: ")
 
 def game_play():
     if user_age >= 15:

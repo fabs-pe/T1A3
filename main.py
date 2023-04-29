@@ -13,6 +13,16 @@ print("> Each round has a larger range, must win pervious to move on")
 print("> Almost forgot!! There is a timer. \n")
 
 
+file_name = "results.csv"
+
+try:
+    results_file = open(file_name, "r")
+    results_file.close()
+except FileNotFoundError as e:
+    results_file = open(file_name, "w")
+    results_file.write("title,completed\n")
+    results_file.close()
+ 
 def menu():
     print("1. Enter 1 to start the game")
     print("2. Enter 2 to view your results")
@@ -20,6 +30,7 @@ def menu():
     print("4. Enter 4 to exit")
     choice = input("Enter your selection: ")
     return choice
+
 
 user_choice = ""
 
