@@ -20,7 +20,7 @@ try:
     results_file.close()
 except FileNotFoundError as e:
     results_file = open(file_name, "w")
-    results_file.write("title,completed\n")
+    results_file.write("Name, Age, Rd 1 Win, Rd 2 Win, Rd 3 Win, Challenge Win\n")
     results_file.close()
  
 def menu():
@@ -38,11 +38,11 @@ while user_choice != "4":
     user_choice = menu()
 
     if (user_choice == "1"):
-        game_play()
+        game_play(file_name)
     elif (user_choice == "2"):
-       results_list()
+       results_list(file_name)
     elif (user_choice == "3"):
-        challenge_game()
+        challenge_game(file_name)
     elif (user_choice == "4"):
         continue
     else:

@@ -1,5 +1,5 @@
 from random import *
-
+import csv
 
 
 user_name = (input("Enter you Name: "))
@@ -10,7 +10,7 @@ def welcome_message():
     
 
 
-def game_play():
+def game_play(file_name):
     guess_attempts_r1 = 3
     guess_attempts_r2 = 3
     guess_attempts_r3 = 3
@@ -31,7 +31,7 @@ def game_play():
         print("You guessed correctly. Move to the next round") 
         result_r1 = True
         break
-    # print(f"Game Over, The correct number is {actual_number_r1}")
+    
     
     
     while guess_attempts_r2 > 0 and  result_r1:
@@ -55,17 +55,21 @@ def game_play():
         print(f"Remaining attempts: {guess_attempts_r3}")
       else:
         print("You guessed correctly.")
+        result_r3 = True
         break
     
     print("Game Over")
-
-
-
+    with open(file_name, "a") as results_file:
+        writer = csv.writer(results_file)
+        writer.writerow([user_name, user_age, result_r1, result_r2, result_r3, "N/A "])
         
-def results_list():
-    print("list_test")
+def results_list(file_name):
+    print("Here are the results")
+    with open(file_name, "r") as results_file:
+         csv.reader(results_file)
+        
     
-def challenge_game():
+def challenge_game(file_name):
     num_to_guess = [31, 22, 83, 94, 335, 62, 709, 81, 19, 130, 17, 124]
     print(f"From this list pick one number that i have picked")
     print(num_to_guess)
@@ -75,8 +79,13 @@ def challenge_game():
     
     if user_guess != random_num:
         print(f"Sorry, thats incorrect, try again next time. The correct number was  {random_num[0]}")
+        result = False
     else:
         print(f"Well done, correct guess")
+        result = True
+    with open(file_name, "a") as results_file:
+        writer = csv.writer(results_file)
+        writer.writerow([user_name, user_age, "N/A ", "N/A ", "N/A ", result])
 
     
 
