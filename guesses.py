@@ -1,6 +1,7 @@
 from random import *
 import csv
 import time
+from colored import fg, bg, attr
 
 
 user_name = (input("Enter your Name: "))
@@ -12,11 +13,11 @@ def welcome_message():
 
 
 def game_play(file_name):
-    print("Game Rules\n")
-    print("> Enter your name and age.")
-    print("> A random number will be selected for you to guess within a range on you age group.")
-    print("> You will have 3 guesses to get the correct number and move on to the next round.")
-    print("> Each round has a larger range, must win pervious to move on\n")
+    print(f'{fg(1)} Game Rules\n {attr(0)}')
+    print(f'{fg(113)}> Enter your name and age.{attr(0)}')
+    print(f'{fg(113)}> A random number will be selected for you to guess within a range on you age group.{attr(0)}')
+    print(f'{fg(113)}> You will have 3 guesses to get the correct number and move on to the next round.{attr(0)}')
+    print(f'{fg(113)}> Each round has a larger range, must win pervious to move on\n {attr(0)}')
     
     guess_attempts_r1 = 3
     guess_attempts_r2 = 3
@@ -25,10 +26,10 @@ def game_play(file_name):
     actual_number_r2 = randint(1, 30)
     actual_number_r3 = randint(1, 50)
     result_r1 = False
-    result_r2 =False
+    result_r2 = False
+    result_r3 = False
     
-    
-    
+
     while guess_attempts_r1 > 0:
       guess = int(input("Enter your guess between 1-15: "))
       print(actual_number_r1) #testing only
@@ -40,8 +41,6 @@ def game_play(file_name):
         print("You guessed correctly. Move to the next round") 
         result_r1 = True
         break
-    
-    
     
     while guess_attempts_r2 > 0 and  result_r1:
       guess = int(input("Enter your guess between 1-30: "))
