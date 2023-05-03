@@ -1,8 +1,9 @@
 from random import *
 import csv
+import time
 
 
-user_name = (input("Enter you Name: "))
+user_name = (input("Enter your Name: "))
 user_age = int(input("Enter your age: ")) 
 
 def welcome_message():
@@ -11,6 +12,12 @@ def welcome_message():
 
 
 def game_play(file_name):
+    print("Game Rules\n")
+    print("> Enter your name and age.")
+    print("> A random number will be selected for you to guess within a range on you age group.")
+    print("> You will have 3 guesses to get the correct number and move on to the next round.")
+    print("> Each round has a larger range, must win pervious to move on\n")
+    
     guess_attempts_r1 = 3
     guess_attempts_r2 = 3
     guess_attempts_r3 = 3
@@ -19,6 +26,8 @@ def game_play(file_name):
     actual_number_r3 = randint(1, 50)
     result_r1 = False
     result_r2 =False
+    
+    
     
     while guess_attempts_r1 > 0:
       guess = int(input("Enter your guess between 1-15: "))
@@ -66,26 +75,43 @@ def game_play(file_name):
 def results_list(file_name):
     print("Here are the results")
     with open(file_name, "r") as results_file:
-         csv.reader(results_file)
-        
+        reader = csv.reader(results_file)
+        for row in reader:
+            print(row)
     
 def challenge_game(file_name):
+    print("Game Rules\n")
+    print("Pick the secret number and beat the secret timer")
+    print("The timer is anywhere between 3-8 seconds")
+    print("Timer is only revealed after selection")
+    print("Be quick, but accurate\n")
     num_to_guess = [31, 22, 83, 94, 335, 62, 709, 81, 19, 130, 17, 124]
     print(f"From this list pick one number that i have picked")
     print(num_to_guess)
     
+    timeout = randint(3,8)  # Timeout after 5 seconds
+    start_time = time.time()  # Record the start time
+    print(timeout)
     user_guess = int(input("Whats you guess: "))
     random_num = sample(num_to_guess,  1)   # Pick a random item from the list
+
     
-    if user_guess != random_num:
-        print(f"Sorry, thats incorrect, try again next time. The correct number was  {random_num[0]}")
-        result = False
-    else:
-        print(f"Well done, correct guess")
-        result = True
+    while True:
+        if time.time() - start_time > timeout:
+            print("Timeout reached, better luck next time!")
+            result = False
+            break
+        elif user_guess != random_num:
+            print(f"Sorry, thats incorrect, try again next time. The correct number was  {random_num[0]}")
+            result = False
+            break
+        elif user_guess == random_num:
+            print(f"Well done, correct guess")
+            result = True
+            break
+
+
     with open(file_name, "a") as results_file:
         writer = csv.writer(results_file)
         writer.writerow([user_name, user_age, "N/A ", "N/A ", "N/A ", result])
-
-    
 
