@@ -8,7 +8,7 @@ user_name = (input("Enter your Name: "))
 user_age = int(input("Enter your age: ")) 
 
 def welcome_message():
-    print(f"Welcome {user_name} , lets get started: ")
+    print(f'{fg(184)}Welcome {user_name} , lets get started: {attr(0)} ')
     
 
 
@@ -31,7 +31,7 @@ def game_play(file_name):
     
 
     while guess_attempts_r1 > 0:
-      guess = int(input("Enter your guess between 1-15: "))
+      guess = int(input(f'{bg(127)}Enter your guess between 1-15: {attr(0)}' ))
       print(actual_number_r1) #testing only
       if guess != actual_number_r1:
         print("Incorrect")
@@ -43,7 +43,7 @@ def game_play(file_name):
         break
     
     while guess_attempts_r2 > 0 and  result_r1:
-      guess = int(input("Enter your guess between 1-30: "))
+      guess = int(input(f'{bg(127)}Enter your guess between 1-30: {attr(0)}'))
       print(actual_number_r2) #testing only
       if guess != actual_number_r2:
         print("Incorrect")
@@ -55,7 +55,7 @@ def game_play(file_name):
         break
     
     while guess_attempts_r3 > 0 and result_r2:
-      guess = int(input("Enter your guess between 1-50: "))
+      guess = int(input(f'{bg(127)}Enter your guess between 1-50: {attr(0)}'))
       print(actual_number_r3) #testing only
       if guess != actual_number_r3:
         print("Incorrect")
