@@ -9,3 +9,9 @@ Python programming language will be used to create this application. Also i will
 ## Features
 
 The user will be asked to input their name and age. The game will then pick a random number for the user to guess within 3 guesses. The range  will get larger as the user moves through the rounds. Total of 3 rounds and need to win to move on to next round.
+
+### The App Functions
+
+- User registration- the user will be asked to enrty their name and age. This will be recorded in the results file and the username will be used for a custom experience
+
+- The Main Game - 
