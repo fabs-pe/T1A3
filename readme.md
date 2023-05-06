@@ -2,6 +2,8 @@
 
 ## GitHub Link [T1A3 APP](https://github.com/fabs-pe/T1A3)
 
+## Monday.com Link [Implementation Plan](https://coderacademy-gang.monday.com/users/sign_up?invitationId=28019481023943442000)
+
 ## Code Style Guide
 
 Python programming language will be used to create this application. Also i will be maing use of a few python libaries, VS Code will be used and all pages are commited to GitHub.
@@ -12,9 +14,9 @@ The user will be asked to input their name and age. The game will then pick a ra
 
 ### The App Functions
 
-- **User registration**- the user will be asked to enrty their name and age. This will be recorded in the results file and the username will be used for a custom experience
+- **User registration**- the user will be asked to enrty their name and age. This will be recorded in the results file and the username will be used for a custom experience. The user will only be allowed to enter whole numbers into age. If a whole number isn't entered they will be asked again to enter an age.
 
-- **The Main Game**  - The app will pick a random number between a set range. The range will depend on the inputted age of the user. The two age groups are 12 and over, and 11 and under. If the user guesses the number correctly they will to the next round. With three rounds in total. Each age group will have its function and the program will loop through 3 incorrect gusses before letting the user know its game over and to start again. If the user guesses correctly within the 3 guesses the next part of the function will run and this will continue for the 3 rounds. The ranges are as follows for the age groups
+- **The Main Game**  - The app will pick a random number between a set range. The range will depend on the inputted age of the user. The two age groups are 12 and over, and 11 and under. If the user guesses the number correctly they will to the next round. With three rounds in total. Each age group will have its function and the program will loop through 3 incorrect gusses before letting the user know its game over and to start again. If the user guesses correctly within the 3 guesses the next part of the function will run and this will continue for the 3 rounds. If the user decides to use letters instaed of numbers for a guess this will still be counted has a guess and the game will continue. The ranges are as follows for the age groups
   - 11 and under
     - Round 1 - 1-10
     - Round 2 - 5-20
