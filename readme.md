@@ -4,9 +4,26 @@
 
 ## Monday.com Link [Implementation Plan](https://coderacademy-gang.monday.com/users/sign_up?invitationId=28019481023943442000)
 
+---
+
 ## Code Style Guide
 
-Python programming language will be used to create this application. Also i will be maing use of a few python libaries, VS Code will be used and all pages are commited to GitHub.
+Python programming language will be used to create this application. Also i will be maing use of a few python libaries, VS Code will be used and all pages are commited to GitHub. I will be following the PEP8 style guide in this program. Some more information can be found here [PEP8][def]
+
+Some of the main points followed are has follow:
+
+- limiting lines to 79 characters
+- Comments limited to 72 lines per line
+- Comments to updated and start with a capital letter
+- Sepaerate inline comments with two or more spaces from the statement
+- Avoid white space
+
+  - at the end of a line (trailing whitspace)
+  - before a comma, semi colon or colon
+  - before open parenthesis that starts a function call or argument list
+  - immediately inside brackets
+
+
 
 ## Features
 
@@ -32,3 +49,6 @@ The user will be asked to input their name and age. The game will then pick a ra
 - **List Of Results** - The first timee the program is run it will create a file that all results will be rescorded in. Every game result  will be printed in this file. The file can be viewed from the main menu.  All results are visable, the user name and age will be printed along side with how far in the game they reached and if the challenge was attempted.
 
 
+
+
+[def]: https://peps.python.org/pep-0008/#introduction
