@@ -2,10 +2,13 @@ from random import *
 import csv
 import time
 from colored import fg, bg, attr
+from rich.console import Console
+from rich.table import Table
 
 
 user_name = str(input("Enter your Name: "))
 user_age = int(input("Enter your Age: ")) 
+
 
 def welcome_message():
     print(f'{fg(184)}Welcome {user_name} , lets get started: {attr(0)} ')
