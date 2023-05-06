@@ -8,14 +8,16 @@
 
 ## Code Style Guide
 
-Python programming language will be used to create this application. Also i will be maing use of a few python libaries, VS Code will be used and all pages are commited to GitHub. I will be following the PEP8 style guide in this program. Some more information can be found here [PEP8][def]
+Python programming language will be used to create this application. Also i will be maing use of a few python libaries, VS Code will be used and all pages are commited to GitHub. I will be following the PEP8 style guide in this program. Some more information can be found here [PEP8](https://peps.python.org/pep-0008/#introduction)
 
 Some of the main points followed are has follow:
 
 - limiting lines to 79 characters
+- align  the indented blockwith the open delimiter
 - Comments limited to 72 lines per line
 - Comments to updated and start with a capital letter
 - Sepaerate inline comments with two or more spaces from the statement
+- indent block comments to the same level then described code
 - Avoid white space
 
   - at the end of a line (trailing whitspace)
@@ -23,7 +25,7 @@ Some of the main points followed are has follow:
   - before open parenthesis that starts a function call or argument list
   - immediately inside brackets
 
-
+- Surround binary operators with a single space on each side
 
 ## Features
 
@@ -47,8 +49,3 @@ The user will be asked to input their name and age. The game will then pick a ra
 - **Challenge Game** - This game will give the user a list of numbers. The aim is to pick the random pre selected number within a random time range of 3 -8 seconds. The user will be notifed of the time they have, and once a number is picked, a result of correct, incorrect or not of time will be displayed. There is only one chance per game, ie no loop. But can play the game has many time as they like.
 
 - **List Of Results** - The first timee the program is run it will create a file that all results will be rescorded in. Every game result  will be printed in this file. The file can be viewed from the main menu.  All results are visable, the user name and age will be printed along side with how far in the game they reached and if the challenge was attempted.
-
-
-
-
-[def]: https://peps.python.org/pep-0008/#introduction
