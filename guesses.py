@@ -2,13 +2,23 @@ from random import *
 import csv
 import time
 from colored import fg, bg, attr
-from rich.progress import track
-from prettytable import PrettyTable, from_csv
+from prettytable import from_csv
 
 
 
 user_name = str(input("Enter your Name: "))
-user_age = int(input("Enter your Age: ")) 
+while True:
+  try:
+    user_age = int(input("Enter your Age: "))
+    break
+  except ValueError as e:
+    print(f'Please enter a number')
+  except Exception:
+    print(f'Please enter a number')
+    
+  
+
+
 
 
 def welcome_message():
@@ -43,8 +53,16 @@ if user_age >= 12:
       result_r3 = False
       
       while guess_attempts_r1 > 0:
-        guess = int(input(f'{bg(127)}Enter your guess between 1-15:{attr(0)}' ))
-        # print(actual_number_r1) # Uncomment for testing
+        print(actual_number_r1) # Uncomment for testing
+        while True: 
+          try:
+            guess = int(input(f'{bg(127)}Enter your guess between 1-15:{attr(0)}' ))
+            break
+          except ValueError as e:
+            print('Not a number, Try again')         
+          except Exception:
+            print('Try again')
+          
         if guess != actual_number_r1:
           print("Incorrect")
           guess_attempts_r1 -= 1
@@ -55,8 +73,16 @@ if user_age >= 12:
           break
       
       while guess_attempts_r2 > 0 and  result_r1:
-        guess = int(input(f'{bg(127)}Enter your guess between 1-30:{attr(0)}'))
-        # print(actual_number_r2) # Uncomment for testing
+        while True: 
+          try:
+            guess = int(input(f'{bg(127)}Enter your guess between 1-30:{attr(0)}' ))
+            break
+          except ValueError as e:
+            print('Not a number, Try again')         
+          except Exception:
+            print('Try again')
+            
+        print(actual_number_r2) # Uncomment for testing
         if guess != actual_number_r2:
           print("Incorrect")
           guess_attempts_r2 -= 1
@@ -67,7 +93,14 @@ if user_age >= 12:
           break
       
       while guess_attempts_r3 > 0 and result_r2:
-        guess = int(input(f'{bg(127)}Enter your guess between 1-50:{attr(0)}'))
+        while True: 
+          try:
+            guess = int(input(f'{bg(127)}Enter your guess between 1-50:{attr(0)}' ))
+            break
+          except ValueError as e:
+            print('Not a number, Try again')         
+          except Exception:
+            print('Try again')
         # print(actual_number_r3) # Uncomment for testing
         if guess != actual_number_r3:
           print("Incorrect")
@@ -104,8 +137,15 @@ if user_age < 12:
       result_r3 = False
       
       while guess_attempts_r1 > 0:
-        guess = int(input(f'{bg(127)}Enter your guess between 1-10:{attr(0)}' ))
-        # print(actual_number_r1) # Uncomment for testing
+        while True: 
+          try:
+            guess = int(input(f'{bg(127)}Enter your guess between 1-10:{attr(0)}' ))
+            break
+          except ValueError as e:
+            print('Not a number, Try again')         
+          except Exception:
+            print('Try again')
+        print(actual_number_r1) # Uncomment for testing
         if guess != actual_number_r1:
           print("Incorrect")
           guess_attempts_r1 -= 1
@@ -116,8 +156,15 @@ if user_age < 12:
           break
       
       while guess_attempts_r2 > 0 and  result_r1:
-        guess = int(input(f'{bg(127)}Enter your guess between 5-20:{attr(0)}'))
-        # print(actual_number_r2) # Uncomment for testing
+        while True: 
+          try:
+            guess = int(input(f'{bg(127)}Enter your guess between 5-20:{attr(0)}' ))
+            break
+          except ValueError as e:
+            print('Not a number, Try again')         
+          except Exception:
+            print('Try again')
+        print(actual_number_r2) # Uncomment for testing
         if guess != actual_number_r2:
           print("Incorrect")
           guess_attempts_r2 -= 1
@@ -128,8 +175,15 @@ if user_age < 12:
           break
       
       while guess_attempts_r3 > 0 and result_r2:
-        guess = int(input(f'{bg(127)}Enter your guess between 10-35:{attr(0)}'))
-        # print(actual_number_r3) # Uncomment for testing
+        while True: 
+          try:
+            guess = int(input(f'{bg(127)}Enter your guess between 10-35:{attr(0)}' ))
+            break
+          except ValueError as e:
+            print('Not a number, Try again')         
+          except Exception:
+            print('Try again')
+        print(actual_number_r3) # Uncomment for testing
         if guess != actual_number_r3:
           print("Incorrect")
           guess_attempts_r3 -= 1
