@@ -11,13 +11,14 @@ def welcome_message():
     print(f'{fg(184)}Welcome {user_name} , lets get started: {attr(0)} ')
 
 
-if user_age >= 15:
+if user_age >= 12:
   def game_play(file_name):
       print(f'{fg(1)} Game Rules\n {attr(0)}')
       print(f'{fg(113)}> Enter your name and age.{attr(0)}')
       print(f'{fg(113)}> A random number will be selected for you to guess within a range on you age group.{attr(0)}')
       print(f'{fg(113)}> You will have 3 guesses to get the correct number and move on to the next round.{attr(0)}')
-      print(f'{fg(113)}> Each round has a larger range, must win pervious to move on\n {attr(0)}')
+      print(f'{fg(113)}> Each round has a larger range, must win pervious to move on {attr(0)}')
+      print(f'{fg(113)}> The number range is based on age, over or under 12\n {attr(0)}')
         
       guess_attempts_r1 = 3
       guess_attempts_r2 = 3
@@ -71,20 +72,21 @@ if user_age >= 15:
           writer = csv.writer(results_file)
           writer.writerow([user_name, user_age, result_r1, result_r2, result_r3, "N/A "])
         
-if user_age <= 15:
+if user_age < 12:
   def game_play(file_name):
       print(f'{fg(1)} Game Rules\n {attr(0)}')
       print(f'{fg(113)}> Enter your name and age.{attr(0)}')
       print(f'{fg(113)}> A random number will be selected for you to guess within a range on you age group.{attr(0)}')
       print(f'{fg(113)}> You will have 3 guesses to get the correct number and move on to the next round.{attr(0)}')
-      print(f'{fg(113)}> Each round has a larger range, must win pervious to move on\n {attr(0)}')
+      print(f'{fg(113)}> Each round has a larger range, must win pervious to move on {attr(0)}')
+      print(f'{fg(113)}> The number range is based on age, over or under 12\n {attr(0)}')
         
       guess_attempts_r1 = 3
       guess_attempts_r2 = 3
       guess_attempts_r3 = 3
-      actual_number_r1 = randint(1, 15)
-      actual_number_r2 = randint(1, 30)
-      actual_number_r3 = randint(1, 50)
+      actual_number_r1 = randint(1, 10)
+      actual_number_r2 = randint(1, 20)
+      actual_number_r3 = randint(1, 35)
       result_r1 = False
       result_r2 = False
       result_r3 = False
@@ -102,7 +104,7 @@ if user_age <= 15:
           break
       
       while guess_attempts_r2 > 0 and  result_r1:
-        guess = int(input(f'{bg(127)}Enter your guess between 1-30:{attr(0)}'))
+        guess = int(input(f'{bg(127)}Enter your guess between 5-20:{attr(0)}'))
         print(actual_number_r2) #testing only
         if guess != actual_number_r2:
           print("Incorrect")
@@ -114,7 +116,7 @@ if user_age <= 15:
           break
       
       while guess_attempts_r3 > 0 and result_r2:
-        guess = int(input(f'{bg(127)}Enter your guess between 1-50:{attr(0)}'))
+        guess = int(input(f'{bg(127)}Enter your guess between 10-35:{attr(0)}'))
         print(actual_number_r3) #testing only
         if guess != actual_number_r3:
           print("Incorrect")
