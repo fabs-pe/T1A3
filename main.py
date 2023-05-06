@@ -3,16 +3,16 @@ from guesses import welcome_message, game_play, results_list, challenge_game
 
 print("Welcome to Guess The Number \n")
 
-welcome_message()
+welcome_message() 
 
 file_name = "results.csv"
 
 try:
-    results_file = open(file_name, "r")
+    results_file = open(file_name, "r") # Opens file as readable if it exixts
     results_file.close()
 except FileNotFoundError as e:
-    results_file = open(file_name, "w")
-    results_file.write("Name, Age, Rd 1 Win, Rd 2 Win, Rd 3 Win, Challenge Win\n")
+    results_file = open(file_name, "w") # If file is not found create the file as writable
+    results_file.write("Name, Age, Rd 1 Win, Rd 2 Win, Rd 3 Win, Challenge Win\n") # Create the coloums in the file
     results_file.close()
  
 def menu():
@@ -20,13 +20,13 @@ def menu():
     print("2. Enter 2 to view your results")
     print("3. Enter 3 for the daily challenge")
     print("4. Enter 4 to exit")
-    choice = input("Enter your selection: ")
+    choice = input("Enter your selection: ") 
     return choice
 
 
 user_choice = ""
 
-while user_choice != "4":
+while user_choice != "4": # If 4 is chosen the program will exit
     user_choice = menu()
 
     if (user_choice == "1"):
@@ -43,8 +43,4 @@ while user_choice != "4":
     input("Press Enter to continue....")
 
 
-print("Thank you for playing, see you soon!")
-
-
-# under_age()
-# countdown(0,0,6)
+print("Thank you for playing, see you soon!") # Message on exit

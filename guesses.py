@@ -19,13 +19,21 @@ if user_age >= 12:
       print(f'{fg(113)}> You will have 3 guesses to get the correct number and move on to the next round.{attr(0)}')
       print(f'{fg(113)}> Each round has a larger range, must win pervious to move on {attr(0)}')
       print(f'{fg(113)}> The number range is based on age, over or under 12\n {attr(0)}')
+      
+      # Create variables for the game
         
       guess_attempts_r1 = 3
       guess_attempts_r2 = 3
       guess_attempts_r3 = 3
+      
+      # Produces random number
+      
       actual_number_r1 = randint(1, 15)
       actual_number_r2 = randint(1, 30)
       actual_number_r3 = randint(1, 50)
+      
+      # Sets results to False, changes to true when round passed
+      
       result_r1 = False
       result_r2 = False
       result_r3 = False
