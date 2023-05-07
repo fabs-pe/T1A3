@@ -29,6 +29,8 @@ Some of the main points followed are has follow:
 
 ## Features
 
+---
+
 The user will be asked to input their name and age. The game will then pick a random number for the user to guess within 3 guesses. The range  will get larger as the user moves through the rounds. Total of 3 rounds and need to win to move on to next round.
 
 ### The App Functions
@@ -52,8 +54,51 @@ The user will be asked to input their name and age. The game will then pick a ra
 
 ## Implementation Plan
 
+---
+
 Once approval was given by Simon for the program idea, the below flowchart was created to design the steps the program will take to reach the end goals.
 
 ![Flowchart](./resources/app_plan.PNG)
 
-Monday.com was also used to breakdown the steps for the creation and to ensure that the project stays on time and features do not get missed. At this link you can view the breakdown - [Implementation Plan](https://coderacademy-gang.monday.com/users/sign_up?invitationId=28019481023943442000). 
+Monday.com was also used to breakdown the steps for the creation and to ensure that the project stays on time and features do not get missed. At this link you can view the breakdown - [Implementation Plan](https://coderacademy-gang.monday.com/users/sign_up?invitationId=28019481023943442000). I have also included some screen shots of the timetable. Each item will be marked off as they are completed.
+
+![week 1](./resources/monday1.PNG)
+![week 2](./resources/monday2.PNG)
+
+## Help Doc
+
+---
+
+The below will help user to install the program from github and use on their local machine.
+
+### Requirements
+
+There is no hardware requiments except for a laptop or desktop that is good working order. Load times can be affected by the amount of RAM and storage available.
+
+The program can be run through the terminal app on :
+
+- linux
+- apple os
+- windows
+
+Python3 is required to run this, you can checkif you have it installed bu running
+
+``` code
+python3 --version
+```
+
+If it is not installed
+
+``` code
+sudo apt install python3
+```
+
+Find more python info [here](https://www.python.org/downloads/)
+
+### Install and Get Started
+
+- At the source repository click on the arrow on  green "code" button and select "download ZIP".
+- Open Terminal app, or vscode
+- Navigate to the folder location cd/path/to/folder
+- Enter "./run.sh" for the program to start
+- Follow prompts and enjoy. 
