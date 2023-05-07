@@ -48,7 +48,7 @@ The user will be asked to input their name and age. The game will then pick a ra
     - Round 2 1-30
     - Round 3 1 -50
 
-- **Challenge Game** - This game will give the user a list of numbers. The aim is to pick the random pre selected number within a random time range of 3 -8 seconds. The user will be notifed of the time they have, and once a number is picked, a result of correct, incorrect or not of time will be displayed. There is only one chance per game, ie no loop. But can play the game has many time as they like.
+- **Challenge Game** - This game will give the user a list of numbers. The aim is to pick the random pre selected number within a random time range of 5 -12 seconds. The user will be notifed of the time they have, and once a number is picked, a result of correct, incorrect or not of time will be displayed. There is only one chance per game, ie no loop. But can play the game has many time as they like.
 
 - **List Of Results** - The first timee the program is run it will create a file that all results will be rescorded in. Every game result  will be printed in this file. The file can be viewed from the main menu.  All results are visable, the user name and age will be printed along side with how far in the game they reached and if the challenge was attempted.
 
@@ -101,4 +101,4 @@ Find more python info [here](https://www.python.org/downloads/)
 - Open Terminal app, or vscode
 - Navigate to the folder location cd/path/to/folder
 - Enter "./run.sh" for the program to start
-- Follow prompts and enjoy. 
+- Follow prompts and enjoy.
