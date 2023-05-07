@@ -53,7 +53,7 @@ if user_age >= 12:
       result_r3 = False
       
       while guess_attempts_r1 > 0:
-        print(actual_number_r1) # Uncomment for testing
+        # print(actual_number_r1) # Uncomment for testing
         while True: 
           try:
             guess = int(input(f'{bg(127)}Enter your guess between 1-15:{attr(0)}' ))
@@ -82,7 +82,7 @@ if user_age >= 12:
           except Exception:
             print('Try again')
             
-        print(actual_number_r2) # Uncomment for testing
+        # print(actual_number_r2) # Uncomment for testing
         if guess != actual_number_r2:
           print("Incorrect")
           guess_attempts_r2 -= 1
@@ -125,13 +125,21 @@ if user_age < 12:
       print(f'{fg(113)}> You will have 3 guesses to get the correct number and move on to the next round.{attr(0)}')
       print(f'{fg(113)}> Each round has a larger range, must win pervious to move on {attr(0)}')
       print(f'{fg(113)}> The number range is based on age, over or under 12\n {attr(0)}')
+      
+      # Create variables for the game
         
       guess_attempts_r1 = 3
       guess_attempts_r2 = 3
       guess_attempts_r3 = 3
-      actual_number_r1 = randint(1, 10)
-      actual_number_r2 = randint(1, 20)
-      actual_number_r3 = randint(1, 35)
+      
+      # Produces random number
+      
+      actual_number_r1 = randint(1, 15)
+      actual_number_r2 = randint(1, 30)
+      actual_number_r3 = randint(1, 50)
+      
+      # Sets results to False, changes to true when round passed
+      
       result_r1 = False
       result_r2 = False
       result_r3 = False
@@ -145,7 +153,7 @@ if user_age < 12:
             print('Not a number, Try again')         
           except Exception:
             print('Try again')
-        print(actual_number_r1) # Uncomment for testing
+        # print(actual_number_r1) # Uncomment for testing
         if guess != actual_number_r1:
           print("Incorrect")
           guess_attempts_r1 -= 1
@@ -164,7 +172,7 @@ if user_age < 12:
             print('Not a number, Try again')         
           except Exception:
             print('Try again')
-        print(actual_number_r2) # Uncomment for testing
+        # print(actual_number_r2) # Uncomment for testing
         if guess != actual_number_r2:
           print("Incorrect")
           guess_attempts_r2 -= 1
@@ -183,7 +191,7 @@ if user_age < 12:
             print('Not a number, Try again')         
           except Exception:
             print('Try again')
-        print(actual_number_r3) # Uncomment for testing
+        # print(actual_number_r3) # Uncomment for testing
         if guess != actual_number_r3:
           print("Incorrect")
           guess_attempts_r3 -= 1
@@ -224,7 +232,7 @@ def challenge_game(file_name):
     start_time = time.time()  # Record the start time
     print(f'{fg(1)} {user_name} you have {timeout} secs to answer {attr(0)}')
     user_guess = int(input("Whats you guess: "))
-    random_num = sample(num_to_guess,  1)   # Pick a random item from the list
+    random_num = sample(num_to_guess,  1)   # Pick a random number from the list
   
     
     while True:

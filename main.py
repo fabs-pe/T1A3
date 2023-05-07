@@ -26,7 +26,7 @@ def menu():
 
 user_choice = ""
 
-while user_choice != "4": # If 4 is chosen the program will exit
+while user_choice != "4": # The program will exit
     user_choice = menu()
 
     if (user_choice == "1"):
@@ -43,4 +43,4 @@ while user_choice != "4": # If 4 is chosen the program will exit
     input("Press Enter to continue....")
 
 
-print("Thank you for playing, see you soon!") # Message on exit
+print("Thank you for playing, see you soon!") # Exit Message
