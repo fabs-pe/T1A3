@@ -4,6 +4,8 @@
 
 ## Monday.com Link [Implementation Plan](https://coderacademy-gang.monday.com/users/sign_up?invitationId=28019481023943442000)
 
+## Video Link [Vimeo](https://vimeo.com/824503679/e272b80ce2)
+
 ---
 
 ## Code Style Guide
@@ -101,4 +103,4 @@ Find more python info [here](https://www.python.org/downloads/)
 - Open Terminal app, or vscode
 - Navigate to the folder location cd/path/to/folder
 - Enter "./run.sh" for the program to start
-- Follow prompts and enjoy.
+- Follow prompts and enjoy
