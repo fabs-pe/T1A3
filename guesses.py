@@ -228,7 +228,7 @@ def challenge_game(file_name):
     
 
     
-    timeout = randint(3,8)  # Timeout after 5 seconds
+    timeout = randint(5,12)  
     start_time = time.time()  # Record the start time
     print(f'{fg(1)} {user_name} you have {timeout} secs to answer {attr(0)}')
     user_guess = int(input("Whats you guess: "))
