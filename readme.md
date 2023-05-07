@@ -51,3 +51,9 @@ The user will be asked to input their name and age. The game will then pick a ra
 - **List Of Results** - The first timee the program is run it will create a file that all results will be rescorded in. Every game result  will be printed in this file. The file can be viewed from the main menu.  All results are visable, the user name and age will be printed along side with how far in the game they reached and if the challenge was attempted.
 
 ## Implementation Plan
+
+Once approval was given by Simon for the program idea, the below flowchart was created to design the steps the program will take to reach the end goals.
+
+![Flowchart](./resources/app_plan.PNG)
+
+Monday.com was also used to breakdown the steps for the creation and to ensure that the project stays on time and features do not get missed. At this link you can view the breakdown - [Implementation Plan](https://coderacademy-gang.monday.com/users/sign_up?invitationId=28019481023943442000). 
